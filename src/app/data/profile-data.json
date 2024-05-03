@@ -1,0 +1,354 @@
+{
+  "basic": {
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "john.doe@me.com",
+    "professionalTitle": "Software Engineer",
+    "avatarUrl": null,
+    "avatarMetadataId": null,
+    "phoneNumber": "+4917600000000",
+    "aboutMe": "<p> a text about me </p>",
+    "openToRemote": false
+  },
+  "location": {
+    "country": "Germany",
+    "city": "Berlin"
+  },
+  "web": {
+    "github": null,
+    "linkedIn": null,
+    "facebook": null,
+    "twitter": null,
+    "website": "https://portfolio-3dbf6.web.app/home/19/"
+  },
+  "languages": [
+    {
+      "id": 1,
+      "name": "German",
+      "level": "Advanced"
+    },
+    {
+      "id": 2,
+      "name": "French",
+      "level": "Native"
+    },
+    {
+      "id": 3,
+      "name": "English",
+      "level": "Intermediate"
+    }
+  ],
+  "tools": [
+    "Git",
+    "Jira"
+  ],
+  "methodologies": [
+    "Agile",
+    "Scrum",
+    "TDD",
+    "MVC"
+  ],
+  "skills": [
+    "SQL",
+    "Firebase",
+    "Algorithm"
+  ],
+  "interests": [
+    "Sport",
+    "Reading",
+    "Playing the Piano",
+    "DIY (Do It Yourself)",
+    "Travel",
+    "Another One"
+  ],
+  "certifications": [
+    {
+      "id": 1,
+      "name": "Google Associate Cloud Engineer",
+      "endDate": {
+        "year": 2022,
+        "month": 3,
+        "day": null
+      }
+    }
+  ],
+  "trainings": [
+    {
+      "id": 1,
+      "title": "Java Design Pattern",
+      "platform": "Udemy"
+    }
+  ],
+  "technicalExperiences": [
+    {
+      "id": 1,
+      "topic": "Programming Languages",
+      "technicalDetails": [
+        {
+          "name": "Java",
+          "level": 3
+        },
+        {
+          "name": "JavaScript",
+          "level": 3
+        },
+        {
+          "name": "TypeScript",
+          "level": 3
+        },
+        {
+          "name": "C/C++",
+          "level": 2
+        },
+        {
+          "name": "Python",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "topic": "Backend Development",
+      "technicalDetails": [
+        {
+          "name": "Spring Boot",
+          "level": 5
+        },
+        {
+          "name": "NodeJs",
+          "level": 4
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "topic": "Frontend Development",
+      "technicalDetails": [
+        {
+          "name": "React",
+          "level": 1
+        },
+        {
+          "name": "Angular",
+          "level": 4
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "topic": "Database",
+      "technicalDetails": [
+        {
+          "name": "MySQL",
+          "level": 3
+        },
+        {
+          "name": "MongoDB",
+          "level": 2
+        },
+        {
+          "name": "BigQuery",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "topic": "Cloud",
+      "technicalDetails": [
+        {
+          "name": "AWS",
+          "level": 3
+        },
+        {
+          "name": "Google Cloud Platform",
+          "level": 2
+        },
+        {
+          "name": "Azure",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "topic": "DevOps",
+      "technicalDetails": [
+        {
+          "name": "Docker",
+          "level": 3
+        },
+        {
+          "name": "Kubernetes",
+          "level": 2
+        },
+        {
+          "name": "Terraform",
+          "level": 3
+        },
+        {
+          "name": "GitHub Actions",
+          "level": 3
+        },
+        {
+          "name": "Jenkins",
+          "level": 3
+        },
+        {
+          "name": "Helm",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "topic": "Testing",
+      "technicalDetails": [
+        {
+          "name": "JUnit",
+          "level": 3
+        },
+        {
+          "name": "Jest",
+          "level": 2
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "topic": "Message Brokers",
+      "technicalDetails": [
+        {
+          "name": "RabbitMQ",
+          "level": 3
+        },
+        {
+          "name": "Kafka",
+          "level": 2
+        },
+        {
+          "name": "Nats.io",
+          "level": 2
+        }
+      ]
+    }
+  ],
+  "education": [
+    {
+      "id": 1,
+      "institution": "Computer Engineering",
+      "degree": "",
+      "major": "Bachelor of Engineering",
+      "current": false,
+      "startDate": {
+        "year": 2017,
+        "month": 4,
+        "day": null
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 3,
+        "day": null
+      },
+      "location": {
+        "country": "Germany",
+        "city": "Berlin"
+      },
+      "description": "<p> a description </p>"
+    },
+    {
+      "id": 2,
+      "institution": "Computer Engineering",
+      "degree": "",
+      "major": "Bachelor of Engineering",
+      "current": false,
+      "startDate": {
+        "year": 2017,
+        "month": 4,
+        "day": null
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 3,
+        "day": null
+      },
+      "location": {
+        "country": "Germany",
+        "city": "Berlin"
+      },
+      "description": "<p> a description </p>"
+    },
+    {
+      "id": 3,
+      "institution": "Computer Engineering",
+      "degree": "",
+      "major": "Bachelor of Engineering",
+      "current": false,
+      "startDate": {
+        "year": 2017,
+        "month": 4,
+        "day": null
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 3,
+        "day": null
+      },
+      "location": {
+        "country": "Germany",
+        "city": "Berlin"
+      },
+      "description": "<p> a description </p>"
+    }
+  ],
+  "experience": [
+    {
+      "id": 1,
+      "title": "Junior Software Entwickler",
+      "company": "Company A",
+      "companyHomepage": null,
+      "current": true,
+      "startDate": {
+        "year": 2022,
+        "month": 8,
+        "day": null
+      },
+      "endDate": null,
+      "location": {
+        "country": "Germany",
+        "city": "Berlin"
+      },
+      "pertinentTechnologies": [
+        "Java",
+        "Go"
+      ],
+      "description": "<ul> <li> a list of descriptions </li></ul>"
+    },
+    {
+      "id": 2,
+      "title": "Werkstudent",
+      "company": "Hiqs Gmbh",
+      "companyHomepage": null,
+      "current": false,
+      "startDate": {
+        "year": 2021,
+        "month": 9,
+        "day": null
+      },
+      "endDate": {
+        "year": 2022,
+        "month": 8,
+        "day": null
+      },
+      "location": {
+        "country": "Germany",
+        "city": "Berlin"
+      },
+      "pertinentTechnologies": [
+        "Java",
+        "Go"
+      ],
+      "description": "<ul> <li> a list of descriptions </li></ul>"
+    }
+  ]
+}
