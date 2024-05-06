@@ -1,0 +1,10 @@
+<mat-nav-list>
+  @for (header of sortedHeaders; track header) {
+    <mat-list-item routerLink="{{header}}">
+      <div class="header-item">
+        <span>{{ headers[header].title.toUpperCase() }}</span>
+        <mat-icon>arrow_right_alt</mat-icon>
+      </div>
+    </mat-list-item>
+  }
+</mat-nav-list>
