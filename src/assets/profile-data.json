@@ -74,8 +74,18 @@
   ],
   "trainings": [
     {
-      "id": 1,
+      "id": 0,
       "title": "Java Design Pattern",
+      "platform": "Udemy"
+    },
+    {
+      "id": 1,
+      "title": "Clean Code",
+      "platform": "Udemy"
+    },
+    {
+      "id": 2,
+      "title": "NgRx",
       "platform": "Udemy"
     }
   ],
@@ -235,7 +245,7 @@
   ],
   "educations": [
     {
-      "id": 1,
+      "id": 0,
       "institution": "Computer Engineering",
       "degree": "",
       "major": "Bachelor of Engineering",
@@ -259,7 +269,7 @@
       "description": "<p> a description </p>"
     },
     {
-      "id": 2,
+      "id": 1,
       "institution": "Computer Engineering",
       "degree": null,
       "major": "Bachelor of Engineering",
@@ -283,7 +293,7 @@
       "description": "<p> a description </p>"
     },
     {
-      "id": 3,
+      "id": 2,
       "institution": "Computer Engineering",
       "degree": null,
       "major": "Bachelor of Engineering",
@@ -309,7 +319,7 @@
   ],
   "experiences": [
     {
-      "id": 1,
+      "id": 0,
       "title": "Junior Software Entwickler",
       "company": "Company A",
       "companyHomepage": null,
