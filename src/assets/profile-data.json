@@ -1,23 +1,23 @@
 {
-  "basic": {
+  "basics": {
     "firstName": "John",
     "lastName": "Doe",
     "email": "john.doe@me.com",
     "professionalTitle": "Software Engineer",
     "avatarUrl": null,
-    "avatarMetadataId": null,
     "phoneNumber": "+4917600000000",
     "aboutMe": "<p> a text about me </p>",
     "openToRemote": false
   },
   "location": {
-    "country": "Germany",
-    "city": "Berlin"
+    "city": "Berlin",
+    "state": "Berlin",
+    "postalCode": "12345",
+    "country": "Germany"
   },
   "web": {
     "github": null,
     "linkedIn": null,
-    "facebook": null,
     "twitter": null,
     "website": "https://portfolio-3dbf6.web.app/home/19/"
   },
@@ -233,7 +233,7 @@
       ]
     }
   ],
-  "education": [
+  "educations": [
     {
       "id": 1,
       "institution": "Computer Engineering",
@@ -251,15 +251,17 @@
         "day": null
       },
       "location": {
-        "country": "Germany",
-        "city": "Berlin"
+        "city": "Berlin",
+        "state": "Berlin",
+        "postalCode": null,
+        "country": "Germany"
       },
       "description": "<p> a description </p>"
     },
     {
       "id": 2,
       "institution": "Computer Engineering",
-      "degree": "",
+      "degree": null,
       "major": "Bachelor of Engineering",
       "current": false,
       "startDate": {
@@ -273,15 +275,17 @@
         "day": null
       },
       "location": {
-        "country": "Germany",
-        "city": "Berlin"
+        "state": "Berlin",
+        "city": "Berlin",
+        "postalCode": null,
+        "country": "Germany"
       },
       "description": "<p> a description </p>"
     },
     {
       "id": 3,
       "institution": "Computer Engineering",
-      "degree": "",
+      "degree": null,
       "major": "Bachelor of Engineering",
       "current": false,
       "startDate": {
@@ -295,19 +299,22 @@
         "day": null
       },
       "location": {
-        "country": "Germany",
-        "city": "Berlin"
+        "city": "Berlin",
+        "state": "Berlin",
+        "postalCode": null,
+        "country": "Germany"
       },
       "description": "<p> a description </p>"
     }
   ],
-  "experience": [
+  "experiences": [
     {
       "id": 1,
       "title": "Junior Software Entwickler",
       "company": "Company A",
       "companyHomepage": null,
       "current": true,
+      "remote": true,
       "startDate": {
         "year": 2022,
         "month": 8,
@@ -315,8 +322,10 @@
       },
       "endDate": null,
       "location": {
-        "country": "Germany",
-        "city": "Berlin"
+        "city": "Berlin",
+        "state": "Berlin",
+        "postalCode": null,
+        "country": "Germany"
       },
       "pertinentTechnologies": [
         "Java",
@@ -330,6 +339,7 @@
       "company": "Hiqs Gmbh",
       "companyHomepage": null,
       "current": false,
+      "remote": false,
       "startDate": {
         "year": 2021,
         "month": 9,
@@ -341,8 +351,10 @@
         "day": null
       },
       "location": {
-        "country": "Germany",
-        "city": "Berlin"
+        "state": "Berlin",
+        "city": "Berlin",
+        "postalCode": null,
+        "country": "Germany"
       },
       "pertinentTechnologies": [
         "Java",
