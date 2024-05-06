@@ -1,0 +1,94 @@
+<div class="header-container">
+  <button mat-button routerLink="">BACK</button>
+  <button mat-button>SAVE</button>
+</div>
+<mat-tab-group>
+  <mat-tab label="Basics">
+    @if (basics$ | async; as basics) {
+      <form class="tabs">
+        <mat-form-field>
+          <mat-label>First Name</mat-label>
+          <input matInput [(ngModel)]="basics.firstName "
+                 name="{{basics.firstName}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Last Name</mat-label>
+          <input matInput [(ngModel)]="basics.lastName"
+                 name="{{basics.lastName}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input matInput placeholder="Ex. pat@example.com" [(ngModel)]="basics.email"
+                 name="{{basics.email}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Profession Title</mat-label>
+          <input matInput placeholder="Ex. Software Engineer" [(ngModel)]="basics.professionalTitle"
+                 name="{{basics.professionalTitle}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Phone Number</mat-label>
+          <input matInput type="tel" [(ngModel)]="basics.phoneNumber"
+                 name="{{basics.phoneNumber}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>About Me</mat-label>
+          <textarea matInput placeholder="Ex. Hi I am ..." [(ngModel)]="basics.aboutMe"
+                    name="{{basics.aboutMe}}"></textarea>
+        </mat-form-field>
+        <mat-checkbox labelPosition=before [(ngModel)]="basics.openToRemote"
+                      name="{{basics.openToRemote}}">I'm open to remote work
+        </mat-checkbox>
+      </form>
+    }
+  </mat-tab>
+  <mat-tab label="Address">
+    @if (location$ | async; as location) {
+      <form class="tabs">
+        <mat-form-field>
+          <mat-label>City</mat-label>
+          <input matInput [(ngModel)]="location.city" name="{{location.city}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>State</mat-label>
+          <input matInput [(ngModel)]="location.state" name="{{location.state}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Zip</mat-label>
+          <input matInput maxlength="5" [(ngModel)]="location.postalCode" name="{{location.postalCode}}">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Country</mat-label>
+          <input matInput [(ngModel)]="location.country" name="{{location.country}}">
+        </mat-form-field>
+      </form>
+    }
+  </mat-tab>
+  <mat-tab label="Network(s)">
+    @if (web$ | async; as web) {
+      <form class="tabs">
+        <mat-form-field>
+          <mat-label>Github</mat-label>
+          <input type="url" matInput [(ngModel)]="web.github" name="github">
+          <mat-icon matPrefix svgIcon="github-fill">github</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>LinkedIn</mat-label>
+          <input type="url" matInput [(ngModel)]="web.linkedIn" name="linkedIn">
+          <mat-icon matPrefix svgIcon="linkedin-box-fill">linkedin</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Twitter</mat-label>
+          <input type="url" matInput [(ngModel)]="web.twitter" name="twitter">
+          <mat-icon matPrefix svgIcon="twitter-fill">twitter</mat-icon>
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Website</mat-label>
+          <input type="url" matInput [(ngModel)]="web.website" name="website">
+          <mat-icon matPrefix svgIcon="global-fill">globe</mat-icon>
+        </mat-form-field>
+      </form>
+    }
+
+  </mat-tab>
+</mat-tab-group>
