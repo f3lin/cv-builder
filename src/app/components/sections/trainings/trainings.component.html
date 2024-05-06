@@ -1,1 +1,50 @@
-<p>trainings works!</p>
+<div class="header-container">
+  <button mat-stroked-button routerLink="">BACK</button>
+  <button mat-stroked-button>SAVE</button>
+</div>
+
+<div class="header-accordion">
+  <button mat-button color="accent" (click)="addTraining()">ADD TRAINING</button>
+  <button style="color: black"
+          disabled
+          disabledInteractive
+          mat-button
+          matTooltip="Reset Content to original"
+          color="warn">RESET</button>
+</div>
+
+@if (trainings$ | async; as trainings) {
+  <mat-accordion>
+    @for (training of trainings; track training.id) {
+      <mat-expansion-panel
+        [expanded]="step === training.id"
+        (opened)="setStep(training.id)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ training.title }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+          <mat-label>Title</mat-label>
+          <input matInput [(ngModel)]="training.title" name="title">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Platform</mat-label>
+          <input matInput [(ngModel)]="training.platform" name="platform">
+        </mat-form-field>
+
+        <mat-action-row>
+          <button mat-button color="warn" (click)="deleteTraining(training)">Delete</button>
+          @if (trainings.length > 1 && training.id != (trainings.length - 1)) {
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          }
+          @if (trainings.length >= 1 && training.id != 0) {
+            <button mat-button color="primary" (click)="prevStep()">Preview</button>
+          }
+        </mat-action-row>
+      </mat-expansion-panel>
+
+    }
+  </mat-accordion>
+}

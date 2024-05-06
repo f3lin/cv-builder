@@ -1,0 +1,22 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  width: 80px;
+}
+
+.header-accordion {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+}
+
+.header-container button {
+  color: black;
+}
+
