@@ -1,1 +1,53 @@
-<p>languages works!</p>
+<div class="header-container">
+  <button mat-stroked-button routerLink="">BACK</button>
+  <button mat-stroked-button>SAVE</button>
+</div>
+
+<div class="header-accordion">
+  <button mat-button color="accent" (click)="addLanguage()">ADD LANGUAGE</button>
+  <button style="color: black"
+          disabled
+          disabledInteractive
+          mat-button
+          matTooltip="Reset Content to original"
+          color="warn">RESET
+  </button>
+</div>
+
+@if (languages$ | async; as languages) {
+  <mat-accordion>
+    @for (language of languages; track language.id) {
+      <mat-expansion-panel
+        [expanded]="step === language.id"
+        (opened)="setStep(language.id)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ language.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+          <mat-label>Language</mat-label>
+          <input matInput [(ngModel)]="language.name" name="language">
+        </mat-form-field>
+        <mat-form-field>
+          <mat-label>Select an option</mat-label>
+          <mat-select [(ngModel)]="language.level">
+            @for (level of languageLevels; track level) {
+              <mat-option [value]="level">{{ level }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <mat-action-row>
+          <button mat-button color="warn" (click)="deleteLanguage(language)">Delete</button>
+          @if (languages.length >= 1 && language.id != 0) {
+            <button mat-button color="accent" (click)="prevStep()">Preview</button>
+          }
+          @if (languages.length > 1 && language.id != (languages.length - 1)) {
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          }
+        </mat-action-row>
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+}
