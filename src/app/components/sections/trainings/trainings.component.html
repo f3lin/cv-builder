@@ -36,11 +36,11 @@
 
         <mat-action-row>
           <button mat-button color="warn" (click)="deleteTraining(training)">Delete</button>
+          @if (trainings.length >= 1 && training.id != 0) {
+            <button mat-button color="accent" (click)="prevStep()">Preview</button>
+          }
           @if (trainings.length > 1 && training.id != (trainings.length - 1)) {
             <button mat-button color="primary" (click)="nextStep()">Next</button>
-          }
-          @if (trainings.length >= 1 && training.id != 0) {
-            <button mat-button color="primary" (click)="prevStep()">Preview</button>
           }
         </mat-action-row>
       </mat-expansion-panel>
