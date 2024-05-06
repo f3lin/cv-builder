@@ -1,0 +1,20 @@
+<mat-toolbar class="navbar">
+    <button mat-fab extended color="primary">
+        <mat-icon>list_alt</mat-icon>
+        Template
+    </button>
+    <span style="flex: auto"></span>
+    <div class="navbar-button-row">
+        <button mat-fab extended color="basic" [matMenuTriggerFor]="profile">
+            <mat-icon>swap_vert</mat-icon>
+            Profile
+        </button>
+        <button mat-fab matTooltip="Save as PDF" color="primary" aria-label="Download the resume as pdf ">
+            <mat-icon>picture_as_pdf</mat-icon>
+        </button>
+    </div>
+</mat-toolbar>
+<mat-menu #profile>
+    <button mat-menu-item>Export</button>
+    <button mat-menu-item>Import</button>
+</mat-menu>
