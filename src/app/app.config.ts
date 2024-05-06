@@ -11,6 +11,6 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(),
     provideAnimationsAsync(),
     provideAnimationsAsync(),
-    provideAnimationsAsync()
+    provideAnimationsAsync(), provideAnimationsAsync()
   ]
 };
