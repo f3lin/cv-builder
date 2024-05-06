@@ -1,3 +1,11 @@
-<div>
-  <p>App works!</p>
-</div>
+<main class="container">
+  <app-navbar></app-navbar>
+  <mat-drawer-container class="app-drawer-container">
+    <mat-drawer class="app-drawer" mode="side" opened>
+      <router-outlet></router-outlet>
+    </mat-drawer>
+    <mat-drawer-content class="app-drawer-content">
+      <app-preview />
+    </mat-drawer-content>
+  </mat-drawer-container>
+</main>

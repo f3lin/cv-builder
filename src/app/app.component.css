@@ -1,0 +1,25 @@
+.container {
+  min-height: 100vh;
+}
+
+.app-drawer-container {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-drawer {
+  padding: 5px;
+  margin: 5px;
+  width: 30%;
+  background: #856a5e;
+}
+
+.app-drawer-content {
+  padding-top: 5px;
+  padding-left: 10px;
+  margin: 5px;
+  width: 70%;
+  background: #ceafa1;
+  min-height: 100vh;
+}
