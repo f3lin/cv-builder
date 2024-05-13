@@ -1,1 +1,51 @@
-<p>certifications works!</p>
+<div class="header-container">
+  <button mat-stroked-button routerLink="">BACK</button>
+  <button mat-stroked-button>SAVE</button>
+</div>
+
+<div class="header-accordion">
+  <button mat-button color="primary" (click)="addCertification()">ADD CERTIFICATION</button>
+  <button style="color: black"
+          disabled
+          disabledInteractive
+          mat-button
+          matTooltip="Reset Content to original"
+          color="warn">RESET
+  </button>
+</div>
+
+@if (certifications$ | async; as certifications) {
+  <mat-accordion>
+    @for (certification of certifications; track certification.id) {
+      <mat-expansion-panel
+        [expanded]="step === certification.id"
+        (opened)="setStep(certification.id)">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            {{ certification.name }}
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <mat-form-field>
+          <mat-label>Certification</mat-label>
+          <input matInput [(ngModel)]="certification.name" name="certification">
+        </mat-form-field>
+
+        <!-- DatePicker-->
+        <app-resume-date-picker [date]="certification.endDate"
+                                (dateEvent)="onDateChange($event, certification)">
+        </app-resume-date-picker>
+
+        <mat-action-row>
+          <button mat-button color="warn" (click)="deleteCertification(certification)">Delete</button>
+          @if (certifications.length >= 1 && certification.id != 0) {
+            <button mat-button color="primary" (click)="prevStep()">Preview</button>
+          }
+          @if (certifications.length > 1 && certification.id != (certifications.length - 1)) {
+            <button mat-button color="primary" (click)="nextStep()">Next</button>
+          }
+        </mat-action-row>
+      </mat-expansion-panel>
+    }
+  </mat-accordion>
+}

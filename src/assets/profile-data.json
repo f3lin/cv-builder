@@ -63,12 +63,12 @@
   ],
   "certifications": [
     {
-      "id": 1,
+      "id": 0,
       "name": "Google Associate Cloud Engineer",
       "endDate": {
         "year": 2022,
         "month": 3,
-        "day": null
+        "day": 26
       }
     }
   ],

@@ -71,7 +71,6 @@ export class TrainingsComponent {
     if (index !== -1 && training.id == 0) {
       data.trainings.splice(index, 1);
       data.trainings.forEach(d => d.id = d.id - 1);
-      this.store.setData(data);
     }
 
     if (index !== -1 && training.id != 0) {
@@ -79,8 +78,9 @@ export class TrainingsComponent {
       data.trainings.forEach(d => {
         if (d.id > training.id) d.id = d.id - 1
       });
-      this.store.setData(data);
     }
+
+    this.store.setData(data);
   }
 
   addTraining() {

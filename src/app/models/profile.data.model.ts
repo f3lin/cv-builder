@@ -10,7 +10,7 @@ export interface Profile {
   "methodologies": string[],
   "skills": string[],
   "interests": string[],
-  "certifications": Certifications[],
+  "certifications": Certification[],
   "trainings": Training[],
   "technicalExperiences": TechnicalExperience[],
   "educations": Education[],
@@ -48,7 +48,7 @@ export interface Language {
   "level": LanguageLevel
 }
 
-export interface Certifications {
+export interface Certification {
   "id": number,
   "name": string,
   "endDate": DateObject,
@@ -56,7 +56,7 @@ export interface Certifications {
 
 export interface DateObject {
   "year": number,
-  "month": string,
+  "month": number,
   "day": number,
 }
 

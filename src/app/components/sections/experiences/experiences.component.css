@@ -1,0 +1,15 @@
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+
+.header-container button {
+  color: black;
+}
+
+.header-accordion {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 5px;
+}

@@ -4,7 +4,7 @@
 </div>
 
 <div class="header-accordion">
-  <button mat-button color="accent" (click)="addTraining()">ADD TRAINING</button>
+  <button mat-button color="primary" (click)="addTraining()">ADD TRAINING</button>
   <button style="color: black"
           disabled
           disabledInteractive
@@ -37,7 +37,7 @@
         <mat-action-row>
           <button mat-button color="warn" (click)="deleteTraining(training)">Delete</button>
           @if (trainings.length >= 1 && training.id != 0) {
-            <button mat-button color="accent" (click)="prevStep()">Preview</button>
+            <button mat-button color="primary" (click)="prevStep()">Preview</button>
           }
           @if (trainings.length > 1 && training.id != (trainings.length - 1)) {
             <button mat-button color="primary" (click)="nextStep()">Next</button>

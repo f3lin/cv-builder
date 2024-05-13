@@ -1,1 +1,14 @@
-<p>technical-experiences works!</p>
+<div class="header-container">
+  <button mat-stroked-button routerLink="">BACK</button>
+  <button mat-stroked-button>SAVE</button>
+</div>
+
+<div class="header-accordion">
+  <button mat-button color="primary" (click)="addTraining()">ADD TRAINING</button>
+  <button style="color: black"
+          disabled
+          disabledInteractive
+          mat-button
+          matTooltip="Reset Content to original"
+          color="warn">RESET</button>
+</div>

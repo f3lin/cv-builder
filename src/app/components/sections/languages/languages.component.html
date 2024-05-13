@@ -4,7 +4,7 @@
 </div>
 
 <div class="header-accordion">
-  <button mat-button color="accent" (click)="addLanguage()">ADD LANGUAGE</button>
+  <button mat-button color="primary" (click)="addLanguage()">ADD LANGUAGE</button>
   <button style="color: black"
           disabled
           disabledInteractive
@@ -41,7 +41,7 @@
         <mat-action-row>
           <button mat-button color="warn" (click)="deleteLanguage(language)">Delete</button>
           @if (languages.length >= 1 && language.id != 0) {
-            <button mat-button color="accent" (click)="prevStep()">Preview</button>
+            <button mat-button color="primary" (click)="prevStep()">Preview</button>
           }
           @if (languages.length > 1 && language.id != (languages.length - 1)) {
             <button mat-button color="primary" (click)="nextStep()">Next</button>
