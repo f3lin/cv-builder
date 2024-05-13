@@ -7,45 +7,35 @@ import {DataStoreService} from "../../../services/data-store/data-store.service"
 import {AsyncPipe} from "@angular/common";
 import {
   MatAccordion,
-  MatExpansionPanel,
-  MatExpansionPanelActionRow,
+  MatExpansionPanel, MatExpansionPanelActionRow,
   MatExpansionPanelHeader,
   MatExpansionPanelTitle
 } from "@angular/material/expansion";
-import {MatFormFieldModule} from "@angular/material/form-field";
-import {MatInputModule} from "@angular/material/input";
-import {FormControl, FormsModule, ReactiveFormsModule} from "@angular/forms";
+import {MatFormField, MatLabel} from "@angular/material/form-field";
+import {MatInput} from "@angular/material/input";
+import {FormsModule} from "@angular/forms";
 import {Certification, DateObject} from "../../../models/profile.data.model";
-import {MatNativeDateModule, provideNativeDateAdapter} from "@angular/material/core";
-import {MatDatepicker, MatDatepickerModule} from "@angular/material/datepicker";
-
-import * as _moment from 'moment';
-// tslint:disable-next-line:no-duplicate-imports
-import {default as _rollupMoment} from 'moment';
+import {provideNativeDateAdapter} from "@angular/material/core";
 import {ResumeDatePickerComponent} from "../../../utilities/resume-date-picker/resume-date-picker.component";
-
-const moment = _rollupMoment || _moment;
 
 @Component({
   selector: 'app-certifications',
   standalone: true,
   imports: [
+    ResumeDatePickerComponent,
     MatButton,
-    MatTooltip,
     RouterLink,
+    MatTooltip,
     AsyncPipe,
     MatAccordion,
     MatExpansionPanel,
-    MatExpansionPanelActionRow,
-    MatExpansionPanelHeader,
     MatExpansionPanelTitle,
-    ReactiveFormsModule,
-    FormsModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatDatepickerModule,
-    MatNativeDateModule,
-    ResumeDatePickerComponent
+    MatExpansionPanelHeader,
+    MatExpansionPanelActionRow,
+    MatFormField,
+    MatInput,
+    MatLabel,
+    FormsModule
   ],
   providers: [provideNativeDateAdapter()],
   templateUrl: './certifications.component.html',
@@ -54,8 +44,6 @@ const moment = _rollupMoment || _moment;
 export class CertificationsComponent {
   step = 0;
   newDate: DateObject = {year:2024, month:1, day:1}
-
-  // date = new FormControl(moment([2017, 0, 1]));
 
   certifications$ = this.store.data$.pipe(
     map((data) => data.certifications)
